@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>大同與小康探索遊戲</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hud">
+    <h1>大同與小康探索遊戲</h1>
+    <p>移動：WASD / 方向鍵　互動：E</p>
+    <div id="roomName">目前房間：大同起點</div>
+    <div id="progressText">已探索：0 / 8</div>
+  </div>
+
+  <div class="game-container">
+    <div id="room" class="room"></div>
+    <div id="player" class="player">主角</div>
+  </div>
+
+  <div class="dialog" id="dialog">
+    <h2 id="dialogTitle">歡迎</h2>
+    <p id="dialogText">
+      這是一個以〈大同與小康〉為主題的探索小遊戲。<br>
+      靠近互動點後按 E，可以查看對應內容。
+    </p>
+  </div>
+
+  <div class="tip" id="tip">靠近互動點時按 E</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
