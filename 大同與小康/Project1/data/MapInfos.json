@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"expanded":false,"name":"街道","order":33,"parentId":9,"scrollX":1061.142857142857,"scrollY":682.2857142857142,"quick":false},
-{"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":1061.142857142857,"scrollY":757.7142857142857,"quick":false},
+{"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":1074.857142857143,"scrollY":757.7142857142857,"quick":false},
 {"id":3,"expanded":true,"name":"中式城市","order":24,"parentId":9,"scrollX":1193.142857142857,"scrollY":970.2857142857142,"quick":false},
 {"id":4,"expanded":false,"name":"武器盔甲商店","order":2,"parentId":2,"scrollX":1061.142857142857,"scrollY":682.2857142857142,"quick":false},
 {"id":5,"expanded":true,"name":"開場地圖","order":34,"parentId":0,"scrollX":825.3333333333334,"scrollY":520,"quick":false},
