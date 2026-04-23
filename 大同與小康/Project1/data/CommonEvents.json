@@ -1,7 +1,7 @@
 [
 null,
-{"id":1,"list":[{"code":112,"indent":0,"parameters":[]},{"code":236,"indent":1,"parameters":["snow",1,100,true]},{"code":0,"indent":1,"parameters":[]},{"code":413,"indent":0,"parameters":[]},{"code":0,"indent":0,"parameters":[]}],"name":"夜晚","switchId":10,"trigger":2},
-{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
+{"id":1,"list":[{"code":230,"indent":0,"parameters":[10]},{"code":357,"indent":0,"parameters":["McKathlin_DayNight","addTime","Add Time",{"time_span":"{\"hours\":\"0\",\"minutes\":\"1\"}"}]},{"code":657,"indent":0,"parameters":["Time Span = {\"hours\":\"0\",\"minutes\":\"1\"}"]},{"code":0,"indent":0,"parameters":[]}],"name":"時間設定","switchId":1,"trigger":2},
+{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":2},
 {"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
 {"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
 ]
