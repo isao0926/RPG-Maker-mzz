@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"battlerName":"蛋蛋 參戰","characterIndex":0,"characterName":"蛋蛋 移動","classId":1,"equips":[5,31,57,13,80],"faceIndex":0,"faceName":"蛋蛋 頭像","traits":[],"initialLevel":1,"maxLevel":99,"name":"豬腳","nickname":"monsterhunter","note":"","profile":"跌落神壇的屠龍者"},
+{"id":1,"battlerName":"蛋蛋 參戰","characterIndex":0,"characterName":"蛋蛋 移動","classId":1,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"蛋蛋 頭像","traits":[],"initialLevel":1,"maxLevel":99,"name":"豬腳","nickname":"monsterhunter","note":"","profile":"跌落神壇的屠龍者"},
 {"id":2,"battlerName":"Actor3_5","characterIndex":4,"characterName":"Evil","classId":1,"equips":[1,0,0,9,0],"faceIndex":4,"faceName":"Evil","traits":[],"initialLevel":10,"maxLevel":99,"name":"村民一號","nickname":"","note":"","profile":"強而有力的村民"},
 {"id":3,"battlerName":"Actor1_3","characterIndex":2,"characterName":"Actor1","classId":5,"equips":[31,0,65,5,0],"faceIndex":2,"faceName":"Actor1","traits":[],"initialLevel":1,"maxLevel":99,"name":"蓋爾","nickname":"","note":"","profile":""},
 {"id":4,"battlerName":"Actor1_4","characterIndex":3,"characterName":"Actor1","classId":6,"equips":[31,0,0,5,0],"faceIndex":3,"faceName":"Actor1","traits":[],"initialLevel":1,"maxLevel":99,"name":"米雪兒","nickname":"","note":"","profile":""},
