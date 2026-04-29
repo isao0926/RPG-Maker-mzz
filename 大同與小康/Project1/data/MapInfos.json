@@ -1,5 +1,6 @@
 [
 null,
+<<<<<<< HEAD
 {"id":1,"expanded":false,"name":"街道","order":17,"parentId":9,"scrollX":831.5999999999999,"scrollY":722.4,"quick":false},
 {"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":742.8,"scrollY":962.4,"quick":false},
 {"id":3,"expanded":false,"name":"燧人氏的家","order":4,"parentId":2,"scrollX":742.8,"scrollY":477.59999999999997,"quick":false},
@@ -13,6 +14,21 @@ null,
 {"id":11,"expanded":true,"name":"起點下右(黃帝家)","order":6,"parentId":10,"scrollX":742.8,"scrollY":722.4,"quick":false},
 {"id":12,"expanded":false,"name":"起點下左(蓐收)","order":8,"parentId":10,"scrollX":742.8,"scrollY":477.59999999999997,"quick":false},
 {"id":13,"expanded":false,"name":"起點左上(共工)","order":11,"parentId":33,"scrollX":752.4,"scrollY":568.8,"quick":false},
+=======
+{"id":1,"expanded":false,"name":"街道","order":17,"parentId":9,"scrollX":832,"scrollY":624,"quick":false},
+{"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":1061.142857142857,"scrollY":840,"quick":false},
+{"id":3,"expanded":false,"name":"燧人氏的家","order":4,"parentId":2,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+{"id":4,"expanded":false,"name":"伏羲氏的家","order":10,"parentId":33,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+{"id":5,"expanded":true,"name":"開場地圖","order":21,"parentId":0,"scrollX":742.8,"scrollY":468,"quick":false},
+{"id":6,"expanded":true,"name":"豬腳的家","order":2,"parentId":2,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+{"id":7,"expanded":false,"name":"沒路燈了","order":20,"parentId":9,"scrollX":854.6666666666666,"scrollY":1377.3333333333333,"quick":false},
+{"id":8,"expanded":true,"name":"蚩尤黃帝打鬥","order":22,"parentId":5,"scrollX":752.4,"scrollY":482.4,"quick":false},
+{"id":9,"expanded":true,"name":"小康","order":16,"parentId":0,"scrollX":1312,"scrollY":760,"quick":false},
+{"id":10,"expanded":true,"name":"起點下(村莊)","order":5,"parentId":2,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+{"id":11,"expanded":false,"name":"起點下右(黃帝家)","order":6,"parentId":10,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+{"id":12,"expanded":false,"name":"起點下左(蓐收)","order":8,"parentId":10,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+{"id":13,"expanded":false,"name":"起點左上(共工)","order":11,"parentId":33,"scrollX":1350.5454545454545,"scrollY":763.6363636363636,"quick":false},
+>>>>>>> 3193e91bd48872c45d34e2a69f7babb5a381853e
 null,
 null,
 {"id":16,"expanded":false,"name":"小康上","order":19,"parentId":9,"scrollX":742.8,"scrollY":756,"quick":false},
