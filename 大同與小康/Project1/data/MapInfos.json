@@ -1,7 +1,11 @@
 [
 null,
 {"id":1,"expanded":false,"name":"街道","order":22,"parentId":9,"scrollX":831.5999999999999,"scrollY":722.4,"quick":false},
+<<<<<<< HEAD
 {"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":825.3333333333334,"scrollY":813.3333333333334,"quick":false},
+=======
+{"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":1074.857142857143,"scrollY":840,"quick":false},
+>>>>>>> parent of 76e9e48 (成就室)
 {"id":3,"expanded":false,"name":"燧人氏的家","order":4,"parentId":2,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":4,"expanded":false,"name":"伏羲氏的家","order":13,"parentId":33,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":5,"expanded":true,"name":"開場地圖","order":26,"parentId":0,"scrollX":742.8,"scrollY":477.59999999999997,"quick":false},
@@ -12,13 +16,21 @@ null,
 {"id":10,"expanded":true,"name":"起點下(村莊)","order":5,"parentId":2,"scrollX":1074.857142857143,"scrollY":1080,"quick":false},
 {"id":11,"expanded":true,"name":"起點下右(黃帝家)","order":6,"parentId":10,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":12,"expanded":false,"name":"起點下左(蓐收)","order":8,"parentId":10,"scrollX":928.5,"scrollY":525,"quick":false},
+<<<<<<< HEAD
 {"id":13,"expanded":true,"name":"起點左上(共工)","order":14,"parentId":33,"scrollX":836,"scrollY":762.6666666666666,"quick":false},
+=======
+{"id":13,"expanded":true,"name":"起點左上(共工)","order":14,"parentId":33,"scrollX":1350.5454545454545,"scrollY":763.6363636363636,"quick":false},
+>>>>>>> parent of 76e9e48 (成就室)
 {"id":14,"expanded":true,"name":"起點下下","order":9,"parentId":10,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":15,"expanded":false,"name":"起點下下下(祝融)","order":10,"parentId":14,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":16,"expanded":false,"name":"小康上","order":24,"parentId":9,"scrollX":742.8,"scrollY":756,"quick":false},
 {"id":17,"expanded":false,"name":"起點下下右(勾芒)","order":11,"parentId":14,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":18,"expanded":true,"name":"起點左上右","order":15,"parentId":13,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+<<<<<<< HEAD
 {"id":19,"expanded":false,"name":"起點左上上","order":16,"parentId":13,"scrollX":742.8,"scrollY":962.4,"quick":false},
+=======
+{"id":19,"expanded":false,"name":"起點左上上","order":16,"parentId":13,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
+>>>>>>> parent of 76e9e48 (成就室)
 null,
 null,
 null,
