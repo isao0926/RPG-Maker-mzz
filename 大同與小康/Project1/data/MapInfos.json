@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"expanded":false,"name":"街道","order":23,"parentId":9,"scrollX":831.5999999999999,"scrollY":722.4,"quick":false},
-{"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":928.5,"scrollY":808.5,"quick":false},
+{"id":2,"expanded":true,"name":"大同世界起點","order":1,"parentId":0,"scrollX":1074.857142857143,"scrollY":706.2857142857142,"quick":false},
 {"id":3,"expanded":false,"name":"燧人氏的家","order":5,"parentId":2,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":4,"expanded":false,"name":"伏羲氏的家","order":14,"parentId":33,"scrollX":825.3333333333334,"scrollY":530.6666666666666,"quick":false},
 {"id":5,"expanded":true,"name":"開場地圖","order":27,"parentId":0,"scrollX":742.8,"scrollY":477.59999999999997,"quick":false},
