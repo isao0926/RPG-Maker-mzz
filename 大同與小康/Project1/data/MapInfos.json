@@ -33,12 +33,12 @@ null,
 {"id":31,"expanded":true,"name":"燧人氏的餐館","order":6,"parentId":2,"scrollX":825.3333333333334,"scrollY":466.6666666666667,"quick":false},
 {"id":32,"expanded":false,"name":"黃帝的家","order":10,"parentId":11,"scrollX":675.2727272727273,"scrollY":434.1818181818182,"quick":false},
 {"id":33,"expanded":false,"name":"起點左(伏羲氏)","order":15,"parentId":2,"scrollX":928.5,"scrollY":531,"quick":false},
-{"id":34,"expanded":true,"name":"小康右右上(機器)","order":33,"parentId":1,"scrollX":1650.6666666666667,"scrollY":933.3333333333334,"quick":false},
+{"id":34,"expanded":true,"name":"小康右右上(機器)","order":33,"parentId":1,"scrollX":1350.5454545454545,"scrollY":763.6363636363636,"quick":false},
 {"id":35,"expanded":true,"name":"小康右(平民社區4)","order":31,"parentId":7,"scrollX":854.6666666666666,"scrollY":1156,"quick":false},
 {"id":36,"expanded":false,"name":"圖書館","order":39,"parentId":21,"scrollX":852,"scrollY":530.6666666666666,"quick":false},
 {"id":37,"expanded":true,"name":"小康右下(刑場)","order":35,"parentId":35,"scrollX":1238,"scrollY":700,"quick":false},
 {"id":38,"expanded":true,"name":"監獄","order":36,"parentId":37,"scrollX":1238,"scrollY":1260,"quick":false},
 null,
 {"id":40,"expanded":false,"name":"小康左上(水利設施)","order":29,"parentId":24,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
-{"id":41,"expanded":true,"name":"小康上右(祭祀)","order":40,"parentId":16,"scrollX":1238,"scrollY":932,"quick":false}
+{"id":41,"expanded":true,"name":"小康上右(祭祀)","order":40,"parentId":16,"scrollX":1350.5454545454545,"scrollY":868.3636363636364,"quick":false}
 ]
