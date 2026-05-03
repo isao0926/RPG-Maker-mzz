@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":false,"name":"小康右右(城外道路)","order":32,"parentId":35,"scrollX":1094.6666666666667,"scrollY":680,"quick":false},
+{"id":1,"expanded":true,"name":"小康右右(城外道路)","order":32,"parentId":35,"scrollX":1094.6666666666667,"scrollY":680,"quick":false},
 {"id":2,"expanded":false,"name":"大同世界起點","order":3,"parentId":0,"scrollX":836,"scrollY":840,"quick":false},
 {"id":3,"expanded":false,"name":"燧人氏的家","order":7,"parentId":2,"scrollX":928.5,"scrollY":525,"quick":false},
 {"id":4,"expanded":false,"name":"伏羲氏的家","order":16,"parentId":33,"scrollX":928.5,"scrollY":525,"quick":false},
@@ -38,8 +38,7 @@ null,
 {"id":36,"expanded":false,"name":"圖書館","order":39,"parentId":21,"scrollX":852,"scrollY":530.6666666666666,"quick":false},
 {"id":37,"expanded":true,"name":"小康右下(刑場)","order":35,"parentId":35,"scrollX":1238,"scrollY":700,"quick":false},
 {"id":38,"expanded":true,"name":"監獄","order":36,"parentId":37,"scrollX":1238,"scrollY":1260,"quick":false},
-{"id":39,"expanded":true,"name":"MAP039","order":40,"parentId":16,"scrollX":1238,"scrollY":796,"quick":false},
+null,
 {"id":40,"expanded":false,"name":"小康左上(水利設施)","order":29,"parentId":24,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
-{"id":41,"expanded":true,"name":"MAP041","order":41,"parentId":39,"scrollX":0,"scrollY":0,"quick":false},
-{"id":42,"expanded":false,"name":"MAP042","order":42,"parentId":41,"scrollX":0,"scrollY":0,"quick":false}
+{"id":41,"expanded":true,"name":"小康上右(祭祀)","order":40,"parentId":16,"scrollX":1254,"scrollY":780,"quick":false}
 ]
