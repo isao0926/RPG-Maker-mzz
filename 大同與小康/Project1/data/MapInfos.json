@@ -40,5 +40,6 @@ null,
 {"id":38,"expanded":true,"name":"監獄","order":36,"parentId":37,"scrollX":1238,"scrollY":1260,"quick":false},
 {"id":39,"expanded":true,"name":"MAP039","order":40,"parentId":16,"scrollX":1238,"scrollY":796,"quick":false},
 {"id":40,"expanded":false,"name":"小康左上(水利設施)","order":29,"parentId":24,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
-{"id":41,"expanded":false,"name":"MAP041","order":41,"parentId":39,"scrollX":0,"scrollY":0,"quick":false}
+{"id":41,"expanded":true,"name":"MAP041","order":41,"parentId":39,"scrollX":0,"scrollY":0,"quick":false},
+{"id":42,"expanded":false,"name":"MAP042","order":42,"parentId":41,"scrollX":0,"scrollY":0,"quick":false}
 ]
