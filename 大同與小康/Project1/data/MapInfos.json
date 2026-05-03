@@ -36,6 +36,7 @@ null,
 {"id":34,"expanded":true,"name":"小康右右上(機器)","order":32,"parentId":1,"scrollX":1650.6666666666667,"scrollY":933.3333333333334,"quick":false},
 {"id":35,"expanded":true,"name":"小康右(平民社區4)","order":30,"parentId":7,"scrollX":854.6666666666666,"scrollY":1156,"quick":false},
 {"id":36,"expanded":false,"name":"圖書館","order":37,"parentId":21,"scrollX":852,"scrollY":530.6666666666666,"quick":false},
-{"id":37,"expanded":true,"name":"小康右下(刑場)","order":34,"parentId":35,"scrollX":993.3333333333334,"scrollY":520,"quick":false},
-{"id":38,"expanded":false,"name":"山村","order":38,"parentId":16,"scrollX":1238,"scrollY":796,"quick":false}
+{"id":37,"expanded":true,"name":"小康右下(刑場)","order":34,"parentId":35,"scrollX":984,"scrollY":534,"quick":false},
+{"id":38,"expanded":true,"name":"監獄","order":38,"parentId":16,"scrollX":1238.3999999999999,"scrollY":795.5999999999999,"quick":false},
+{"id":39,"expanded":false,"name":"蓄水池","order":39,"parentId":38,"scrollX":742.8,"scrollY":818.4,"quick":false}
 ]
