@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"list":[{"code":111,"indent":0,"parameters":[0,10,0]},{"code":230,"indent":1,"parameters":[100]},{"code":357,"indent":1,"parameters":["McKathlin_DayNight","addTime","Add Time",{"time_span":"{\"hours\":\"0\",\"minutes\":\"1\"}"}]},{"code":657,"indent":1,"parameters":["Time Span = {\"hours\":\"0\",\"minutes\":\"1\"}"]},{"code":0,"indent":1,"parameters":[]},{"code":412,"indent":0,"parameters":[]},{"code":111,"indent":0,"parameters":[0,11,0]},{"code":230,"indent":1,"parameters":[150]},{"code":357,"indent":1,"parameters":["McKathlin_DayNight","addTime","Add Time",{"time_span":"{\"hours\":\"0\",\"minutes\":\"1\"}"}]},{"code":657,"indent":1,"parameters":["Time Span = {\"hours\":\"0\",\"minutes\":\"1\"}"]},{"code":0,"indent":1,"parameters":[]},{"code":412,"indent":0,"parameters":[]},{"code":0,"indent":0,"parameters":[]}],"name":"時間設定","switchId":1,"trigger":2},
-{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":2},
+{"id":2,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":14,"trigger":2},
 {"id":3,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0},
 {"id":4,"list":[{"code":0,"indent":0,"parameters":[]}],"name":"","switchId":1,"trigger":0}
 ]
