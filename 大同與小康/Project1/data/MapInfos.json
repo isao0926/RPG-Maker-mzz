@@ -1,7 +1,7 @@
 [
 null,
 {"id":1,"expanded":true,"name":"小康右右(城外道路)","order":33,"parentId":35,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
-{"id":2,"expanded":true,"name":"大同世界起點","order":3,"parentId":0,"scrollX":1238,"scrollY":740,"quick":false},
+{"id":2,"expanded":true,"name":"大同世界起點","order":3,"parentId":0,"scrollX":675.2727272727273,"scrollY":1014.5454545454546,"quick":false},
 {"id":3,"expanded":false,"name":"燧人氏的家","order":7,"parentId":2,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":4,"expanded":false,"name":"伏羲氏的家","order":16,"parentId":33,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
 {"id":5,"expanded":false,"name":"開場地圖","order":1,"parentId":0,"scrollX":1061.142857142857,"scrollY":600,"quick":false},
