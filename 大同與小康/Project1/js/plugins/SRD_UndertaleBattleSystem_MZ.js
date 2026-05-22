@@ -413,7 +413,7 @@
  * - I do not want any credits for this.
  *
  * ==========================================================================
- *  Skill Notetags
+ * Skill Notetags
  * ==========================================================================
  *
  * Place these notetags into the notebox of a Skill to customize the qualities
@@ -484,37 +484,36 @@
  *
  * <UTB Code>
  * </UTB Code>
- * 
- * This allows you to customize JavaScript code for the overall Skill.
+ * * This allows you to customize JavaScript code for the overall Skill.
  * You can use 'f' and 'p' which are variables representing the current frame
  * and player object respectively.
  *
  * Here's some examples:
  *
  *
- *  - How to change Player's mode to 1 at frame 100:
+ * - How to change Player's mode to 1 at frame 100:
  * <UTB Code>
  * if(f === 100) {
- *   p.setMode(1);
+ * p.setMode(1);
  * }
  * </UTB Code>
  *
  *
  *
- *  - How to show a message at frame 300:
+ * - How to show a message at frame 300:
  * <UTB Code>
  * if(f === 300) {
- *   this.message("Hello \\!This is a message.");
+ * this.message("Hello \\!This is a message.");
  * }
  * </UTB Code>
  *
  *
  *
- *  - How to have a 1 in 100 chance for an instance of Attack 1 to
- *    spawn every frame:
+ * - How to have a 1 in 100 chance for an instance of Attack 1 to
+ * spawn every frame:
  * <UTB Code>
  * if(Math.randomInt(100) === 1) {
- *   this.createAttack(1);   
+ * this.createAttack(1);   
  * }
  * </UTB Code>
  *
@@ -523,29 +522,28 @@
  *
  * <UTB Initial Code>
  * </UTB Initial Code>
- * 
- * This is code that is run once at the start of the Skill.
+ * * This is code that is run once at the start of the Skill.
  * It is mainly used to initialize variables and spawn preparation attacks
  * if it is necessary.
  *
  * Here's some examples:
  *
  *
- *  - Creates a number variable called "count":
+ * - Creates a number variable called "count":
  * <UTB Initial Code>
  * this._count = 0;
  * </UTB Initial Code>
  *
  *
  *
- *  - Spawns Attack 1 on the first frame only:
+ * - Spawns Attack 1 on the first frame only:
  * <UTB Initial Code>
  * this.createAttack(1); 
  * </UTB Initial Code>
  *
  *
  *
- *  - Sets the frame's Width to 500 and substract 50 from the frame's X:
+ * - Sets the frame's Width to 500 and substract 50 from the frame's X:
  * <UTB Initial Code>
  * this.window.width = 500;
  * this.window.x -= 50;
@@ -603,7 +601,7 @@
  *
  *
  * ==========================================================================
- *  Actor Notetags
+ * Actor Notetags
  * ==========================================================================
  *
  * Use these to customize the Image and Collision of the Actor:
@@ -625,7 +623,7 @@
  * Simply set this to a number.
  *
  * Example: <UTB Speed: 4>
- *          <UTB Speed: 6>
+ * <UTB Speed: 6>
  *
  *
  * ==========================================================================
@@ -637,7 +635,7 @@
  * You can use: "circle" or "rect".
  *
  * Example: <UTB Shape: circle>
- *          <UTB Shape: rect>
+ * <UTB Shape: rect>
  *
  *
  * ==========================================================================
@@ -653,7 +651,7 @@
  *
  *
  * ==========================================================================
- *  Misc JavaScript Eval Info
+ * Misc JavaScript Eval Info
  * ==========================================================================
  *
  *
@@ -722,10 +720,9 @@
  *
  *
  * ==========================================================================
- *  End of Help File
+ * End of Help File
  * ==========================================================================
- * 
- * Welcome to the bottom of the Help file.
+ * * Welcome to the bottom of the Help file.
  *
  *
  * Thanks for reading!
@@ -736,7 +733,7 @@
  *
  *
  * Until next time,
- *   ~ SumRndmDde
+ * ~ SumRndmDde
  */
 
 var SRD = SRD || {};
@@ -974,23 +971,13 @@ _.loadUTBTagsFromSkills = function(skills) {
 			if(skills[i].note.match(/<\s*UTB\s*Initial\s*Code\s*>([\d\D\n\r]*)<\/\s*UTB\s*Initial\s*Code\s*>/im)) {
 				skills[i].utb_inicode = String(RegExp.$1);
 			}
-			var matchResult = [];
-			matchResult[0] = skills[i].note.match(/<UTB Attack 1>([\d\D\n\r]*)<\/UTB Attack 1>/im);
-			matchResult[1] = skills[i].note.match(/<UTB Attack 2>([\d\D\n\r]*)<\/UTB Attack 2>/im);
-			matchResult[2] = skills[i].note.match(/<UTB Attack 3>([\d\D\n\r]*)<\/UTB Attack 3>/im);
-			matchResult[3] = skills[i].note.match(/<UTB Attack 4>([\d\D\n\r]*)<\/UTB Attack 4>/im);
-			matchResult[4] = skills[i].note.match(/<UTB Attack 5>([\d\D\n\r]*)<\/UTB Attack 5>/im);
-			matchResult[5] = skills[i].note.match(/<UTB Attack 6>([\d\D\n\r]*)<\/UTB Attack 6>/im);
-			matchResult[6] = skills[i].note.match(/<UTB Attack 7>([\d\D\n\r]*)<\/UTB Attack 7>/im);
-			matchResult[7] = skills[i].note.match(/<UTB Attack 8>([\d\D\n\r]*)<\/UTB Attack 8>/im);
-			matchResult[8] = skills[i].note.match(/<UTB Attack 9>([\d\D\n\r]*)<\/UTB Attack 9>/im);
-			for(var j = 0; j <= 8; j++) {
-				if(j === 0) {
-					skills[i].utb_attack = [];
-					_.loadUTBTagsFromSkillsPart2(matchResult[j] || ['',''], skills, i, j);
-				} else if(matchResult[j]) {
-					_.loadUTBTagsFromSkillsPart2(matchResult[j], skills, i, j);
-				}
+			
+			skills[i].utb_attack = [];
+			var attackRegex = /<UTB Attack (\d+)>([\s\S]*?)<\/UTB Attack \1>/gim;
+			var match;
+			while ((match = attackRegex.exec(skills[i].note)) !== null) {
+				var attackId = parseInt(match[1]);
+				_.loadUTBTagsFromSkillsPart2(["", match[2]], skills, i, attackId - 1);
 			}
 		}
 	}
@@ -1024,6 +1011,7 @@ _.loadUTBTagsFromSkillsPart2 = function(matchResult, skills, i, index) {
 	var destructible = /\s*Destructible\s*:\s*(.*)/im;
 	var directCode = /<\s*Direct\s*Code\s*>([\d\D\n\r]*)<\/\s*Direct\s*Code\s*>/im;
 	var initalCode = /<\s*Initial\s*Code\s*>([\d\D\n\r]*)<\/\s*Initial\s*Code\s*>/im;
+	var warning = /\s*Warning\s*:\s*(.*)/im;
 	_.loadImage(_.image);
 	if(matchResult[1].match(image)) {
 		skills[i].utb_attack[index].image = RegExp.$1;
@@ -1158,6 +1146,11 @@ _.loadUTBTagsFromSkillsPart2 = function(matchResult, skills, i, index) {
 		skills[i].utb_attack[index].iniCode = RegExp.$1;
 	} else {
 		skills[i].utb_attack[index].iniCode = _.iniCode;
+	}
+	if(matchResult[1].match(warning)) {
+		skills[i].utb_attack[index].warning = RegExp.$1;
+	} else {
+		skills[i].utb_attack[index].warning = "0";
 	}
 };
 
@@ -2207,6 +2200,11 @@ Undertale_Enemy.prototype.initialize = function(utb, window, p, battleSystem) {
 	this._frameHeight = 0;
 	this._currentFrame = 0;
 	this._baseBitmap = null;
+
+	this.warningTime = (utb.warning) ? eval(utb.warning) : 0;
+	this.isWarning = this.warningTime > 0;
+	this.originalOpacity = this.opacity;
+
 	this.start(this.window);
 };
 
@@ -2291,9 +2289,17 @@ Undertale_Enemy.prototype.move = function(speed, window) {
 			const enemyindex = this.utbBattleSystem._enemies.indexOf(this)
 			this.utbBattleSystem._enemies.delete(enemyindex);
 			this.utbBattleSystem._enemyHolder.removeChild(this)
-			// Or set alpha to 0 and only remove on deactivate.
 		}
 	} else {
+		if (this.isWarning) {
+			this.warningTime--;
+			this.opacity = (this.warningTime % 10 < 5) ? 100 : 255;
+			if (this.warningTime <= 0) {
+				this.isWarning = false;
+				this.opacity = this.originalOpacity;
+			}
+		}
+
 		var frame = this.frame;
 		var second = Math.floor(frame / 60);
 		this.x += this.xspeed;
@@ -2401,6 +2407,7 @@ Sprite.prototype.insideFrame = function(x, y) {
 
 Undertale_Enemy.prototype.checkCollisionPlayer = function(p) {
 	if(this.destroyAnimation) return false;
+	if(this.isWarning) return false;
 	if(this.type.match(/stop/i) && !p.isMoving()) return false;
 	if(this.type.match(/move/i) && p.isMoving()) return false;
 	if(this.shape === 'pixel') {
@@ -2597,7 +2604,7 @@ Game_MessageBubble.prototype.useText = function() {
 };
 
 /* ========================================================================== */
-/*                                   MZ CODE                                  */
+/* MZ CODE                                  */
 /* ========================================================================== */
 const Window_Base_initialize = Window_Base.prototype.initialize
 Window_Base.prototype.initialize = function(rect) {
