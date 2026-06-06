@@ -4,7 +4,7 @@
     "chromium-args": "--force-color-profile=srgb",
     "window": {
         "title": "從零開始的大同生活",
-        "width": 924,
+        "width": 816,
         "height": 624,
         "position": "center",
         "icon": "icon/icon.png"
