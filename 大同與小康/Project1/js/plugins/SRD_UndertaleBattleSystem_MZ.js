@@ -1,394 +1,478 @@
 /*:
  * @target MZ
- * @plugindesc Allows developers to create bullet-hell dodge systems in their battles; based off of the system from Undertale.
+ * @plugindesc 讓開發者在戰鬥中建立彈幕閃避系統，移植並改編自 Undertale 的戰鬥系統。
  * @author SumRndmDde
  *
  * @param Draw Collision Masks
+ * @text 顯示碰撞範圍
  * @type boolean
- * @desc Set this to 'true' and collision masks will be visible.
+ * @desc 設為 'true' 時，碰撞遮罩（碰撞判定範圍）會顯示出來，方便除錯。
  * @default false
  *
  * @param == Sound Effects ==
+ * @text == 音效 ==
  * @default
  *
  * @param Damage SE
+ * @text 受傷音效
  * @type file
  * @dir audio/se
- * @desc Set this to the name of the file that will be used as the Sound Effect when an Actor is damaged.
+ * @desc 角色受到傷害時播放的音效檔名。
  * @default Damage4
  *
  * @param Death Damage SE
+ * @text 死亡音效
  * @type file
  * @dir audio/se
- * @desc Set this to the name of the file that will be used as the Sound Effect when an Actor is killed.
+ * @desc 角色被擊殺時播放的音效檔名。
  * @default Ice2
  *
  * @param Death Fade SE
+ * @text 消逝音效
  * @type file
  * @dir audio/se
- * @desc Set this to the name of the file that will be used as the Sound Effect when an Actor fades.
+ * @desc 角色淡出消失時播放的音效檔名。
  * @default Collapse2
  *
  * @param Shield SE
+ * @text 防禦音效
  * @type file
  * @dir audio/se
- * @desc Set this to the name of the file that will be used as the Sound Effect when an Actor shields.
+ * @desc 角色舉盾防禦時播放的音效檔名。
  * @default Shot2
  *
  * @param Shoot SE
+ * @text 射擊音效
  * @type file
  * @dir audio/se
- * @desc Set this to the name of the file that will be used as the Sound Effect when an Actor shoots.
+ * @desc 角色射擊時播放的音效檔名。
  * @default Shot1
  *
  * @param == Enemy Bubble ==
+ * @text == 敵人對話框 ==
  * @default
  *
  * @param Bubble Window Skin
+ * @text 對話框視窗皮膚
  * @type file
  * @dir img/system
- * @desc The window skin used by dialogues during battles.
- * Leave blank for default.
+ * @desc 戰鬥中敵人對話使用的視窗皮膚。
+ * 留空則使用預設皮膚。
  * @default
  *
  * @param Auto Save Texts
+ * @text 自動套用儲存文字
  * @type boolean
- * @desc If 'true', then all the saved texts in the $gameMessageBubble will be used at the beginning of each Skill.
+ * @desc 若為 'true'，每個技能開始時會自動套用 $gameMessageBubble 中所有已儲存的文字。
  * @default true
  *
  * @param == Image Hues ==
+ * @text == 圖像色相 ==
  * @default
  *
  * @param Normal Hue
+ * @text 一般模式色相
  * @type number
  * @min 0
  * @max 360
- * @desc The hue of the Player image when using Normal Mode.
- * In other words- <UTB Mode: 0>
+ * @desc 玩家在一般模式（Normal）下的圖像色相。
+ * 也就是 <UTB Mode: 0>
  * @default 0
  *
  * @param Gravity Hue
+ * @text 重力模式色相
  * @type number
  * @min 0
  * @max 360
- * @desc The hue of the Player image when using Gravity Mode.
- * In other words- <UTB Mode: 1>
+ * @desc 玩家在重力模式（Gravity）下的圖像色相。
+ * 也就是 <UTB Mode: 1>
  * @default 200
  *
  * @param Shield Hue
+ * @text 盾牌模式色相
  * @type number
  * @min 0
  * @max 360
- * @desc The hue of the Player image when using Shield Mode.
- * In other words- <UTB Mode: 2>
+ * @desc 玩家在盾牌模式（Shield）下的圖像色相。
+ * 也就是 <UTB Mode: 2>
  * @default 100
  *
  * @param Trap Hue
+ * @text 陷阱模式色相
  * @type number
  * @min 0
  * @max 360
- * @desc The hue of the Player image when using Shooter Mode.
- * In other words- <UTB Mode: 3>
+ * @desc 玩家在陷阱模式（Trap）下的圖像色相。
+ * 也就是 <UTB Mode: 3>
  * @default 300
  *
  * @param Shooter Hue
+ * @text 射擊模式色相
  * @type number
  * @min 0
  * @max 360
- * @desc The hue of the Player image when using Bullet Mode.
- * In other words- <UTB Mode: 4>
+ * @desc 玩家在射擊模式（Shooter）下的圖像色相。
+ * 也就是 <UTB Mode: 4>
  * @default 40
  *
  * @param == Gravity Mode ==
+ * @text == 重力模式 ==
  * @default
  *
  * @param Jump Power
- * @desc A value which determines the power of the jump.
+ * @text 跳躍力道
+ * @desc 決定跳躍力道大小的數值。
  * @default 4
  *
  * @param Jump Limit
- * @desc A value which determines how long the jump can be held for.
+ * @text 跳躍上限
+ * @desc 決定跳躍可持續按住多久的數值。
  * @default 25
  *
  * @param Jump Gravity
- * @desc A value which determines how fast the player will accelerate downward.
+ * @text 跳躍重力
+ * @desc 決定玩家向下加速有多快的數值。
  * @default 0.4
  *
  * @param == Shield Mode ==
+ * @text == 盾牌模式 ==
  * @default
  *
  * @param Shield Image
+ * @text 盾牌圖像
  * @type file
  * @dir img/SumRndmDde/utb
- * @desc The image the shield will use (from /img/SumRndmDde/utb/)
- * Leave blank for default image.
+ * @desc 盾牌使用的圖像（取自 /img/SumRndmDde/utb/）。
+ * 留空則使用預設圖像。
  * @default
  *
  * @param Shield Thickness
- * @desc The thickness of the shield.
+ * @text 盾牌厚度
+ * @desc 盾牌的厚度。
  * @default 6
  *
  * @param == Trap Mode ==
+ * @text == 陷阱模式 ==
  * @default
  *
  * @param Trap Move Speed
- * @desc The speed the player moves between each string.
+ * @text 陷阱移動速度
+ * @desc 玩家在各條線之間移動的速度。
  * @default 15
  *
  * @param Trap Positions
- * @desc The relative Y positions the player can move to.
+ * @text 陷阱位置
+ * @desc 玩家可移動到的相對 Y 座標位置（以逗號分隔）。
  * @default 30, 90, 150
  *
  * @param Trap Color
- * @desc The color of the strings in trap mode.
+ * @text 陷阱顏色
+ * @desc 陷阱模式中線條的顏色。
  * @default #FF00FF
  *
  * @param == Shooter Mode ==
+ * @text == 射擊模式 ==
  * @default
  *
  * @param Bullet Image
+ * @text 子彈圖像
  * @type file
  * @dir img/SumRndmDde/utb
- * @desc The image the bullets will use (from /img/SumRndmDde/utb/)
- * Leave blank for default image.
+ * @desc 子彈使用的圖像（取自 /img/SumRndmDde/utb/）。
+ * 留空則使用預設圖像。
  * @default
  *
  * @param Shoot Cooldown
- * @desc The amount of cooldown in frames after the player shoots.
+ * @text 射擊冷卻
+ * @desc 玩家射擊後的冷卻時間（以幀為單位）。
  * @default 30
  *
  * @param Bullet X Speed
- * @desc The horizontal speed of the bullets.
+ * @text 子彈 X 速度
+ * @desc 子彈的水平速度。
  * @default 0
  *
  * @param Bullet Y Speed
- * @desc The vertical speed of the bullets.
+ * @text 子彈 Y 速度
+ * @desc 子彈的垂直速度。
  * @default -8
  *
  * @param == Defaults ==
+ * @text == 預設值 ==
  * @default
  *
  * @param Default Duration
- * @desc The default duration of UTB Skills if one is not specified.
+ * @text 預設持續時間
+ * @desc 未指定時，UTB 技能的預設持續時間。
  * @default 1000
  *
  * @param Default Mode
- * @desc The default mode of UTB Skills if one is not specified.
+ * @text 預設模式
+ * @desc 未指定時，UTB 技能的預設模式。
  * @default 0
  *
  * @param Default Invincibility
- * @desc The default amount of frames the invincibility lasts.
+ * @text 預設無敵時間
+ * @desc 無敵狀態持續的預設幀數。
  * @default 60
  *
  * @param Default P. Speed
- * @desc The default speed of an Actor is one is not specified.
+ * @text 預設玩家速度
+ * @desc 未指定時，角色的預設移動速度。
  * @default 3
  *
  * @param Default P. Shape
- * @desc The default shape of an Actor is one is not specified.
+ * @text 預設玩家形狀
+ * @desc 未指定時，角色的預設碰撞形狀。
  * @type select
- * @option circle
- * @option rect
- * @option pixel
+ * @option 圓形
+ * @value circle
+ * @option 矩形
+ * @value rect
+ * @option 像素
+ * @value pixel
  * @default circle
  *
  * @param Default P. Width
- * @desc The default width of an Actor is one is not specified.
+ * @text 預設玩家寬度
+ * @desc 未指定時，角色的預設寬度。
  * @default 20
  *
  * @param Default P. Height
- * @desc The default height of an Actor is one is not specified.
+ * @text 預設玩家高度
+ * @desc 未指定時，角色的預設高度。
  * @default 20
  *
  * @param Default P. Radius
- * @desc The default radius of an Actor is one is not specified.
+ * @text 預設玩家半徑
+ * @desc 未指定時，角色的預設半徑。
  * @default 10
  *
  * @param == Attack Defaults ==
+ * @text == 攻擊預設值 ==
  * @default
  *
  * @param Image
+ * @text 攻擊圖像
  * @type file
  * @dir img/SumRndmDde/utb
- * @desc The Image of the UTB Attack.
- * Input a file from /img/SumRndmDde/utb/
+ * @desc UTB 攻擊的圖像。
+ * 請輸入 /img/SumRndmDde/utb/ 中的檔案。
  * @default
  *
  * @param Animation Frames
- * @desc The amount of frames the "Image" is split into. Frames must be spread out horizontally.
+ * @text 動畫格數
+ * @desc 「攻擊圖像」被切分成的格數。各格須沿水平方向排列。
  * @default
  *
  * @param Animation Speed
- * @desc The frame delay between each frame of the animation.
+ * @text 動畫速度
+ * @desc 動畫每一格之間的延遲幀數。
  * @default 4
  *
  * @param Type
+ * @text 閃避類型
  * @type select
- * @option Move
- * @option Stop
+ * @option 移動才能閃避
+ * @value Move
+ * @option 靜止才能閃避
+ * @value Stop
  * @option 
- * @desc "Stop" means player must not move to dodge.
- * "Move" means player must move to dodge.
+ * @desc 「靜止(Stop)」表示玩家必須不動才能閃避；
+ * 「移動(Move)」表示玩家必須移動才能閃避。
  * @default
  *
  * @param Initial X
+ * @text 初始 X 座標
  * @type multiline_string
- * @desc The initial X position of the attack.
- * Input a number or JavaScript eval.
+ * @desc 攻擊的初始 X 座標。
+ * 可輸入數字或 JavaScript 運算式。
  * @default this.window.x + (this.window.width / 2)
  *
  * @param Initial Y
+ * @text 初始 Y 座標
  * @type multiline_string
- * @desc The initial Y position of the attack.
- * Input a number or JavaScript eval.
+ * @desc 攻擊的初始 Y 座標。
+ * 可輸入數字或 JavaScript 運算式。
  * @default this.window.y + (this._player.getHeight() / 2)
  *
  * @param Collision Type
+ * @text 碰撞類型
  * @type multiline_string
- * @desc The collision type of the attack.
- * Input "circle", "rect", or "pixel".
+ * @desc 攻擊的碰撞類型。
+ * 請輸入 "circle"、"rect" 或 "pixel"。
  * @default circle
  *
  * @param Radius
- * @desc The radius of the attack in collision and scaling.
- * Only used with "circle" collision type.
+ * @text 半徑
+ * @desc 攻擊在碰撞與縮放上的半徑。
+ * 僅在碰撞類型為 "circle" 時使用。
  * @default 13
  *
  * @param Width
- * @desc The width of the attack in collision and scaling.
- * Only used with "rect" collision type.
+ * @text 寬度
+ * @desc 攻擊在碰撞與縮放上的寬度。
+ * 僅在碰撞類型為 "rect" 時使用。
  * @default 26
  *
  * @param Height
- * @desc The width of the attack in collision and scaling.
- * Only used with "rect" collision type.
+ * @text 高度
+ * @desc 攻擊在碰撞與縮放上的高度。
+ * 僅在碰撞類型為 "rect" 時使用。
  * @default 26
  *
  * @param X Speed
- * @desc The initial X Speed of the attack.
- * Positive speed moves to the right; negative to the left.
+ * @text X 速度
+ * @desc 攻擊的初始 X 速度。
+ * 正值向右移動，負值向左移動。
  * @default 0
  *
  * @param Y Speed
- * @desc The initial Y Speed of the attack.
- * Positive speed moves down; negative moves up.
+ * @text Y 速度
+ * @desc 攻擊的初始 Y 速度。
+ * 正值向下移動，負值向上移動。
  * @default 2
  *
  * @param X Accel
- * @desc The initial X Acceleration of the attack.
- * This value is added to the X Speed every frame.
+ * @text X 加速度
+ * @desc 攻擊的初始 X 加速度。
+ * 每一幀都會把此值加到 X 速度上。
  * @default 0
  *
  * @param Y Accel
- * @desc The initial Y Acceleration of the attack.
- * This value is added to the Y Speed every frame.
+ * @text Y 加速度
+ * @desc 攻擊的初始 Y 加速度。
+ * 每一幀都會把此值加到 Y 速度上。
  * @default 0
  *
  * @param X Scale
- * @desc The initial X Scale of the attack.
- * This value does affect the collision.
+ * @text X 縮放
+ * @desc 攻擊的初始 X 縮放。
+ * 此值會影響碰撞判定。
  * @default 1
  *
  * @param Y Scale
- * @desc The initial Y Scale of the attack.
- * This value does affect the collision.
+ * @text Y 縮放
+ * @desc 攻擊的初始 Y 縮放。
+ * 此值會影響碰撞判定。
  * @default 1
  *
  * @param Opacity
- * @desc The initial Opacity of the attack.
- * This value does not affect the collision.
+ * @text 不透明度
+ * @desc 攻擊的初始不透明度。
+ * 此值不會影響碰撞判定。
  * @default 255
  *
  * @param Rotation
- * @desc The initial Rotation of the attack.
- * This value does not affect the collision.
+ * @text 旋轉角度
+ * @desc 攻擊的初始旋轉角度。
+ * 此值不會影響碰撞判定。
  * @default 0
  *
  * @param Visibility
+ * @text 是否可見
  * @type boolean
- * @desc The initial Visibility of the attack.
- * This value does not affect the collision.
+ * @desc 攻擊的初始可見狀態。
+ * 此值不會影響碰撞判定。
  * @default true
  *
  * @param Color
- * @desc The color used by a generated image for the attack.
- * Input a JavaScript color or 'random'.
+ * @text 顏色
+ * @desc 生成攻擊圖像時所用的顏色。
+ * 可輸入 JavaScript 顏色字串或 'random'。
  * @default random
  *
  * @param Spawn Rate
- * @desc The amount of time, in frames, it takes between each attack to spawn.
+ * @text 生成間隔
+ * @desc 每次生成攻擊之間相隔的時間（以幀為單位）。
  * @default 100
  *
  * @param Spawn Delay
- * @desc The amount of time, in frames, it takes before the attack starts spawning.
+ * @text 生成延遲
+ * @desc 攻擊開始生成之前的等待時間（以幀為單位）。
  * @default 0
  *
  * @param Delete Distance
- * @desc How far outside the boundaries the attack must be to be deleted.
+ * @text 刪除距離
+ * @desc 攻擊需超出邊界多遠才會被刪除。
  * @default 1
  *
  * @param Destructible
+ * @text 可被摧毀
  * @type boolean
- * @desc If 'true', this attack can be destroyed using Yellow Mode's bullets.
+ * @desc 若為 'true'，此攻擊可被黃色模式（Yellow Mode）的子彈摧毀。
  * @default true
  *
  * @param Direct Code
+ * @text 每幀執行碼
  * @type multiline_string
- * @desc Direct JavaScript code that will be run in the attack each frame.
+ * @desc 在攻擊中每一幀都會執行的 JavaScript 程式碼。
  * @default
  *
  * @param Initial Code
+ * @text 初始執行碼
  * @type multiline_string
- * @desc JavaScript code that will be run on frame 1 of the attack.
+ * @desc 在攻擊第 1 幀執行的 JavaScript 程式碼。
  * @default
  *
  * @param == Battle Frame ==
+ * @text == 戰鬥框 ==
  * @default
  *
  * @param Collision Padding
- * @desc The padding within the frame. Change this if the collision between the player and frame doesn't look right.
+ * @text 碰撞內距
+ * @desc 框內的內距。若玩家與框之間的碰撞看起來不對，可調整此值。
  * @default 5
  *
  * @param Background Opacity
- * @desc The opacity of the background of the Battle Frame. If you want a perfectly solid background, change the Window.png.
+ * @text 背景不透明度
+ * @desc 戰鬥框背景的不透明度。若想要完全不透明的背景，請改用 Window.png。
  * @default 255
  *
  * @param Frame X
+ * @text 框 X 座標
  * @type multiline_string
- * @desc The x position of the frame.
+ * @desc 戰鬥框的 X 座標。
  * @default (Graphics.width / 2) - (width / 2)
  *
  * @param Frame Width
+ * @text 框寬度
  * @type multiline_string
- * @desc The width of the frame.
- * @default 180
+ * @desc 戰鬥框的寬度。（可填數字或運算式；此處隨畫面寬度自動放大並水平置中）
+ * @default Graphics.width - 80
  *
  * @param Frame Height
+ * @text 框高度
  * @type multiline_string
- * @desc The height of the frame.
- * @default 180
+ * @desc 戰鬥框的高度。（框會從底部 HP 視窗上緣往上延伸；此處隨畫面高度自動放大）
+ * @default Graphics.height - 160
  *
  * @param == Actor HP Window ==
+ * @text == 角色 HP 視窗 ==
  * @default
  *
  * @param Actor Frame X
+ * @text 角色框 X 座標
  * @type multiline_string
- * @desc The x position of the Actor HP frame.
+ * @desc 角色 HP 框的 X 座標。
  * @default (Graphics.boxWidth / 2) - (this._singleActorHP.width / 2)
  *
  * @param Actor Frame Y
+ * @text 角色框 Y 座標
  * @type multiline_string
- * @desc The y position of the Actor HP frame.
+ * @desc 角色 HP 框的 Y 座標。
  * @default Graphics.height - this._singleActorHP.height - 20
  *
  * @param Actor Frame Width
+ * @text 角色框寬度
  * @type multiline_string
- * @desc The width of the Actor HP frame.
+ * @desc 角色 HP 框的寬度。
  * @default 400
  *
  * @param Actor Frame Height
+ * @text 角色框高度
  * @type multiline_string
- * @desc The height of the Actor HP frame.
+ * @desc 角色 HP 框的高度。
  * @default this.fittingHeight(1)
  *
  * @help
@@ -2314,6 +2398,70 @@ Undertale_Enemy.prototype.move = function(speed, window) {
 		if(this._currentFrame+1 > this.aniFrames) this._currentFrame = 0;
 		this.refreshFrame();
 	}
+};
+
+//-----------------------------------------------------------------------------
+// 新增輔助方法：朝向玩家瞄準 / 正弦波移動
+//-----------------------------------------------------------------------------
+
+/**
+ * 將子彈的速度向量設定為「直線朝向玩家當前位置」。
+ * 通常在 iniCode（生成當下）呼叫一次，子彈便會以固定方向飛向呼叫當下的玩家座標，
+ * 形成可預判、有規律感的彈道（適合魂系風格的瞄準彈）。
+ *
+ * @param {number} speed 子彈飛行的速度大小（每幀位移量）。
+ *                       若省略，則沿用子彈當前速度向量的大小（皆無則預設為 4）。
+ * @returns {number} 朝向玩家的角度（弧度），方便外部用於設定 this.rotation。
+ */
+Undertale_Enemy.prototype.aimAtPlayer = function(speed) {
+	// 取得玩家中心座標（玩家 anchor 為 0.5, 0.5，x / y 即為螢幕中心點）
+	var px = this._player.x;
+	var py = this._player.y;
+
+	// 計算由子彈指向玩家的向量與角度
+	var dx = px - this.x;
+	var dy = py - this.y;
+	var angle = Math.atan2(dy, dx);
+
+	// 若未指定速度，沿用目前速度向量的大小（沒有則預設為 4）
+	if(speed === undefined) {
+		speed = Math.sqrt(this.xspeed * this.xspeed + this.yspeed * this.yspeed) || 4;
+	}
+
+	// 設定朝向玩家的直線飛行向量
+	this.xspeed = Math.cos(angle) * speed;
+	this.yspeed = Math.sin(angle) * speed;
+
+	return angle;
+};
+
+/**
+ * 讓子彈在直線移動的同時，疊加一道正弦波偏移，形成 S 型（蛇行）軌跡。
+ * 請在 directCode（每幀執行）中呼叫。本方法以「相鄰幀的正弦差值」逐幀疊加，
+ * 因此會保留原本由 xspeed / yspeed 決定的主行進方向，只在其垂直方向上擺動。
+ *
+ * @param {number} amplitude 擺動振幅（像素），數值越大左右晃動越明顯。
+ * @param {number} frequency 擺動頻率（弧度 / 幀），建議 0.05 ~ 0.3；數值越大波長越短。
+ */
+Undertale_Enemy.prototype.waveMovement = function(amplitude, frequency) {
+	// 以當前 frame 與前一 frame 的正弦差值，取得這一幀應疊加的偏移增量。
+	// 採用差值疊加可確保正弦波是「附加」在原有直線運動之上，而非取代它。
+	var phase = this.frame * frequency;
+	var prevPhase = (this.frame - 1) * frequency;
+	var delta = amplitude * (Math.sin(phase) - Math.sin(prevPhase));
+
+	// 計算垂直於行進方向的單位向量，使擺動橫跨彈道，形成 S 型軌跡
+	var len = Math.sqrt(this.xspeed * this.xspeed + this.yspeed * this.yspeed);
+	if(len === 0) {
+		// 若子彈本身沒有行進方向，預設沿水平 (X) 軸擺動
+		this.x += delta;
+		return;
+	}
+	var perpX = -this.yspeed / len;
+	var perpY = this.xspeed / len;
+
+	this.x += perpX * delta;
+	this.y += perpY * delta;
 };
 
 Undertale_Enemy.prototype.startDestroy = function(index) {
