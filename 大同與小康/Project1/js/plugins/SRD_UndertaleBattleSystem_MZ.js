@@ -2861,5 +2861,17 @@ Window_Bubble_Message.prototype.synchronizeNameBox = function() {
 Window_Bubble_Message.prototype.isAnySubWindowActive = function() {
     return false
 }
+const _Undertale_Player_setMode = Undertale_Player.prototype.setMode;
+Undertale_Player.prototype.setMode = function(mode) {
+    _Undertale_Player_setMode.call(this, mode);
+    // 切換模式時，呼叫 MZ 內建的濾鏡來即時改變色相
+    if (this.setHue) this.setHue(this.hue());
+};
 
+const _Undertale_Player_setImage = Undertale_Player.prototype.setImage;
+Undertale_Player.prototype.setImage = function() {
+    _Undertale_Player_setImage.call(this);
+    // 初始讀取圖片時，同步套用色相濾鏡
+    if (this.setHue) this.setHue(this.hue());
+};
 })(SRD.UTB);
